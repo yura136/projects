@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Гибкие сетки CSS</title>
+	<style>
+		body {
+			font: 1em 'PT Sans', Arial, Helvetica, sans-serif;
+			color: #333;
+		}
+
+		.container {
+			width: 300px;
+			margin: 0 auto;
+		}
+
+		.row {
+			margin-bottom: 20px;
+		}
+
+		[class+="span"] {
+			float: left;
+			display: inline;
+			margin-right: 20px;
+		}
+
+		[class+="span"]:last-child {
+			float: left;
+			display: inline;
+			margin-right: 20px;
+		}
+
+		.span1 {width: 60px;}
+		.span2 {width: 140px;}
+		.span3 {width: 220px;}
+		.span4 {width: 300px;}
+
+		.offset1 {margin-left: 60px;}
+		.offset2 {margin-left: 140px;}
+		.offset3 {margin-left: 220px;}
+		.offset4 {margin-left: 300px;}
+
+	</style>
+</head>
+<body>
+	<div class="container"></div>
+</body>
+</html>

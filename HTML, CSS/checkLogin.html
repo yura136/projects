@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Проверка логина</title>
+</head>
+<body>
+	<script>
+		var userName = prompt("Кто пришел?", "");
+
+		if(userName == "Админ") {
+
+			var password = prompt('Пароль', '');
+
+			if (password == 'Черный властелин') {
+				alert('Добро пожаловать!');
+			}else if (password == null) {
+				alert('Вход отменен');
+			} else {
+				alert('Пароль неверен');
+			}
+
+		}else if (userName == null) {
+			alert("Вход отменен");
+
+		} else {
+
+			alert('Я вас не знаю');
+
+		}
+	</script>
+</body>
+</html>

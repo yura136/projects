@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Радиус</title>
+	<style>
+		.container {
+			width: 150px;
+			height: 80px;
+			background: #444;
+			border-radius: 5px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px; 
+
+			position: relative;
+		}
+		.container:after {
+			content: '';
+			position: absolute;
+
+			width: 0px;
+			height: 0px;
+			border-top: 10px solid #444;
+			border-right: 10px solid transparent;
+			border-left: 10px solid transparent;
+
+			bottom: -10px;
+			left: 65px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container"></div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+a {
+  font-size: 18px;
+  display: inline-block;
+  border: 2px solid #cccccc;
+}
+.navigation {
+  width: 100px;
+}
+#navigation {
+  height: 500px;
+}
+.header-navigation {
+  background: #fff;
+}
+body {
+  background-image: url("img/city.jpeg");
+}
+body {
+  background-size: 100%;
+  background-color: #f00;
+}
+div:before {
+  content: "Some text";
+}
+header {
+  background: green;
+}
+footer {
+  color: gray;
+}
+footer li {
+  background: blue;
+}

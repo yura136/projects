@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Переходы</title>
+	<style>
+		body {
+			/*background: url();*/
+			font: 1em 'PT Sans', Tahoma, Arial;
+			text-transform: uppercase;
+		}
+
+		/**********Main Menu***********/
+
+		.nav {
+			list-style: none;
+			margin: 30px;
+			opacity: .5;
+			padding: 0;
+			width: 50px;
+
+			-moz-transition: opacity .3s ease-in-out;
+			-o-transition: opacity .3s ease-in-out;
+			-webkit-transition: opacity .3s ease-in-out;
+			transition: opacity .3s ease-in-out;
+		}
+
+		.nav:hover {
+			opacity: 1;
+		}
+
+		.nav li {
+			height: 50px;
+			overflow: hidden;
+			width: 50px;
+
+			-moz-transition: width .2s ease-in-out, height .2s ease-in-out .2s;
+			-o-transition: width .2s ease-in-out, height .2s ease-in-out .2s;
+			-webkit-transition: width .2s ease-in-out, height .2s ease-in-out .2s;
+			transition: width .2s ease-in-out, height .2s ease-in-out .2s;
+		}
+
+		.nav li:hover {
+			height: 175px;
+			width: 200px;
+		}
+
+		.nav li a {
+			background: #bbb;
+			color: #fff;
+			cursor: pointer; 
+			display: block;
+			height: 40px;
+			line-height: 40px;
+			margin: 1px;
+			padding-left: 15px;
+			width: 200px;
+
+			/*transition-delay: 1s;*/
+			transition-duration: .2s;
+			transition-property: all;
+			transition-timing-function: ease-in-out;
+
+			-moz-transition-duration: .2s;
+			-moz-transition-property: all;
+			-moz-transition-timing-function: ease-in-out;
+			/*-moz-transition-delay: 1s;*/
+
+			-webkit-transition-duration: .2s;
+			-webkit-transition-property: all;
+			-webkit-transition-timing-function: ease-in-out;
+			/*-webkit-transition-delay: .1s;*/
+		}
+
+		.nav li a:hover {
+			background: #2fc5ff;
+		}
+
+		.nav li a:first-child {
+			font-size: 1.1em;
+			height: 50px;
+			line-height: 50px;
+			position: relative;
+			text-indent: 36px;
+		}
+
+		.nav li a:first-child::before {
+			content:'';
+			display: block;
+			height: 32px;
+			left: 9px;
+			position: absolute;
+			top: 9px;
+			width: 32px;
+		}
+
+		.main-menu a:first-child::before {
+			background: url(images/home.png) center no-repeat;
+		}
+
+		.settings a:first-child::before {
+			background: url(images/settings.png) center no-repeat;
+		}
+
+		.link a:first-child::before {
+			background: url(images/link.png) center no-repeat;
+		}
+
+		.search a:first-child::before {
+			background: url(images/search_0.png) center no-repeat;
+		}
+
+		
+	</style>
+</head>
+<body>
+	<ul class="nav">
+		<li class="main-menu">
+			<a>Main Menu</a>
+			<a>Products</a>
+			<a>Store</a>
+			<a>Forum</a>
+		</li>
+		<li class="settings">
+			<a>Settings</a>
+			<a>Account</a>
+			<a>Notifications</a>
+			<a>Display</a>
+		</li>
+		<li class="link">
+			<a>Link</a>
+			<a>Embed</a>
+			<a>Short link</a>
+			<a>Full link</a>
+		</li>
+		<li class="search">
+			<a>Serch</a>
+			<a>Item 2</a>
+			<a>Item 3</a>
+			<a>Item 4</a>
+		</li>
+	</ul>
+</body>
+</html>

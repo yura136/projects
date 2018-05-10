@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My forms</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form action = "" method = "post">
+            <p>Ваше имя: <input type="text" name ="name"></p>
+            <p>Ваше возраст: <input type="text" name ="age"></p>
+            <p><input type="submit"></p>
+        </form>
+        Привет <?php echo htmlspecialchars($_POST['name']); ?>
+        Вам <?php echo htmlspecialchars($_POST['age']); ?> лет.
+        <?php ?>
+    </body>
+</html>

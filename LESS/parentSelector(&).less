@@ -1,0 +1,75 @@
+// Parent selector - &
+// Используем вложенность селекторов
+body {
+	font-size: 18px;
+	ul {
+		font-size: 16px;
+		li {
+			font-size: 14px;
+		}
+	}
+}
+// Использование родительского селектора
+// это ссылка на родительский элемент
+a {
+	text-decoration: none;
+	&:hover{
+		color: #000;
+	}
+	&>span {
+		color: gray;
+	}
+}
+//Ссылка вложена в другой элемент
+.nav {
+	a {
+	color: #fff;
+		&:hover{
+			color: #000;
+		}
+	}
+}
+// Можно дописывать значения к родительскому селектору
+.input{
+	color: #000;
+	&-success{
+		color: green;
+	}
+}
+// Можно несколько раз
+.class {
+	.btn {
+		color: #fff;
+		& + & {color: #000;}
+		& > & {color: gray;}
+		&& {color: yellow;}
+		&, & {color: green;}
+	}
+}
+// Еще одно использование 
+.nav{
+	.menu{
+		color: #fff;
+		background: red;
+		.home & {
+			color: #000;
+			background: white;
+		}
+		.cls .cls1 & {
+			color: purple;
+		}
+	}
+}
+// Много селектров
+.nav2, .nav3 {
+	&::before{
+		content: "sf";
+	}
+}
+// Все возможные комбинации
+div, p, ul, li, span {
+	color: #eee;
+	& &{
+		color: orange;
+	}
+}

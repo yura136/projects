@@ -1,0 +1,86 @@
+// Mixin с параметрами
+.transition(@prop; @timing; @effect; @delay) {
+	-webkit-transition: @prop @timing @effect @delay;
+	-o-transition: @prop @timing @effect @delay;
+	transition: @prop @timing @effect @delay;
+}
+.class {
+	.transition(all, 0.2s, linear, 0.5s);
+}
+// Примененние @arguments - сохраняет все свойства 
+.transition(@prop; @timing; @effect; @delay) {
+	-webkit-transition: @arguments;
+	-o-transition: @arguments;
+	transition: @arguments;
+}
+.class1 {
+	.transition(all, 0.2s, linear, 0.5s);
+}
+// Когда не знаем сколько будет параметров...
+.transition1(@prop; @timing; @rest...) {
+	transition: @arguments;
+}
+.class1 {
+	.transition1(width, 0.8s, linear, 0.5s);
+}
+
+.transition2(@prop; @timing; @rest...) {
+	transition: @prop @timing @rest;
+}
+.class1 {
+	.transition2(width, 0.8s, linear, 0.5s);
+}
+
+.transition3(@prop; @timing; @rest...) {
+	transition: @rest;
+}
+.class1 {
+	.transition3(width, 0.8s, linear, 0.5s);
+}
+
+// 2 одинаковые примеси с равным количеством параметров
+.changeColor(light, @color) {
+	background: @color + 25%; // светлее
+}
+.changeColor(dark, @color) {
+	background: @color - 25%; // теменее
+}
+
+.class3 {
+	.changeColor(light, red);
+}
+.class3 {
+	.changeColor(dark, red);
+}
+
+//mixin  как обычные функции
+.mixin() { // return  blue
+	@bcg: blue; 
+}
+
+.class4 {
+	.mixin(); // Обязательно указывать
+	background: @bcg;
+}
+
+.mixin1() { // return  blue
+	@bcg: blue; 
+	@height: 50px;
+	@width: 100px;
+}
+
+.class5 {
+	.mixin1(); // Обязательно указывать
+	background: @bcg;
+	height: @height;
+	widows: @width;
+}
+
+.sum(@var1, @var2) {
+	@var: @var1 + @var2;
+}
+
+.clsSum {
+	.sum(25px, 50px);
+	height: @var;
+}

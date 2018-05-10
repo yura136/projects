@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Анимации</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+	<style>
+		body {
+			background: #ccc;
+		}
+
+		.square {
+			width: 40px;
+			height: 40px;
+			background: #333;
+			margin: 30px;
+			box-shadow: 0 0 4px rgba(0,0,0,.4);
+			animation: spin 2s linear infinite 1s alternate;
+			/*animation-name: spin;
+			animation-duration: 2s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+			animation-delay: 1s;
+			animation-direction: alternate;*/
+		}
+
+		.square:hover {
+			animation-play-state: paused;
+		}
+
+		@-webkit-keyframes spin {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="square"></div>
+</body> 
+</html>

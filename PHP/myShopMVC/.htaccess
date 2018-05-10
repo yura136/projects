@@ -1,0 +1,35 @@
+#AddDefaultCharset utf-8
+#
+#Options +FollowSymLinks
+#Options -Indexes
+#DirectoryIndex index.php
+#
+#RewriteEngine on
+#RewriteBase /
+#
+##RewriteCond $1 !^(index\.php)
+##RewriteCond %{REQUEST_URI} !\.(css|js|jpg|gif)$
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#
+##RewriteRule ^css/(.*).css$     css/$1.css [L,QSA]
+##RewriteRule ^style\.css$ category/scc/style.css [NC,L] =)
+#RewriteRule ^(.*)$ myShopMVC/index.php
+
+AddDefaultCharset utf-8
+
+RewriteEngine on
+Options All -Indexes
+RewriteBase /
+
+ErrorDocument 400 /
+ErrorDocument 401 /
+ErrorDocument 402 /
+ErrorDocument 403 /
+ErrorDocument 404 /
+ErrorDocument 500 /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ /myShopMVC/index.php

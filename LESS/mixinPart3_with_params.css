@@ -1,0 +1,36 @@
+.class {
+  -webkit-transition: all 0.2s linear 0.5s;
+  -o-transition: all 0.2s linear 0.5s;
+  transition: all 0.2s linear 0.5s;
+}
+.class1 {
+  -webkit-transition: all 0.2s linear 0.5s;
+  -o-transition: all 0.2s linear 0.5s;
+  transition: all 0.2s linear 0.5s;
+}
+.class1 {
+  transition: width 0.8s linear 0.5s;
+}
+.class1 {
+  transition: width 0.8s linear 0.5s;
+}
+.class1 {
+  transition: linear 0.5s;
+}
+.class3 {
+  background: #ff1919;
+}
+.class3 {
+  background: #e60000;
+}
+.class4 {
+  background: blue;
+}
+.class5 {
+  background: blue;
+  height: 50px;
+  widows: 100px;
+}
+.clsSum {
+  height: 75px;
+}

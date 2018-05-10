@@ -1,0 +1,93 @@
+// Extend (расширение правил)
+// Первый способ записи
+.link-btn {
+	&:extend(.btn);
+}
+
+.btn {
+	color: #000;
+	font-size: 18px;
+}
+// Второй способ записи
+.link-btn:extend(.btn2) {}
+
+.btn2 {
+	color: #000;
+	font-size: 18px;
+}
+// Первыс способ
+.link-btn:extend(.nav .btn3) {}
+
+.nav {
+	.btn3 {
+	color: #000;
+	font-size: 18px;
+	}
+}
+// Второй способ через all
+.link-btn:extend(.btn3 all) {}
+
+.nav {
+	.btn3 {
+	color: #000;
+	font-size: 18px;
+	}
+}
+// Еще раз через all
+.link-btn:extend(.btn4 all) {}
+
+body .nav1 .btn4 {
+	color: #000;
+	font-size: 18px;
+}
+// Расширение от нескольких селекторов
+// Первый способ
+.link-btn:hover:active :extend(.btn5, .btn6) {}
+
+.btn5 {
+	color: #000;
+	font-size: 18px;
+}
+.btn6 {
+	background: yellow;
+}
+// Второй способ несколько раз extend
+.link-btn:hover:active :extend(.btn5):extend(.btn6) {}
+.btn5 {
+	color: #000;
+	font-size: 18px;
+}
+.btn6 {
+	background: yellow;
+}
+// Несколько классов
+.link-btn, .link-btn1, .link-btn2{
+	&:extend(.btn7);
+}
+.btn7{
+	color: navy;
+}
+// Свои свойства для селекторов
+.link-btn8{
+	&:extend(.btn8);
+	font-size: 1rem;
+}
+.btn8{
+	color: navy;
+}
+// Для вложенных селекторов
+.btn9{
+	div & {
+		font-style: italic;
+	}
+}
+.link-btn9 {
+	&:extend(div .btn9);
+}
+// Особенности расширения
+.btn10:nth-of-type(1n+3){
+	color: orange;
+}
+.link-btn10 {
+	&:extend(.btn10:nth-of-type(1n+3)); // Точно так же
+}

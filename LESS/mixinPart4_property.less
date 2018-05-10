@@ -1,0 +1,58 @@
+// Передача свойств в mixin
+.mixin(@rules) {
+	@rules();
+}
+
+.class {
+	.mixin({ 
+		font-size: 18px;
+		background: red;
+		font-style: italic;
+	 })
+}
+// Медиа запросы
+.screenLarge(@rules) {
+	@media screen and (min-width: 1200px){
+		@rules();
+	}
+	@media screen and (min-height: 800px){
+		@rules();
+	}
+}
+.classMedia {
+	.screenLarge({
+		font-size: 2rem;
+		font-weight: bold;
+		color: #000;
+	})
+}
+
+.screenSmall(@rules) {
+	@media screen and (max-width: 1199px){
+		@rules();
+	}
+	@media screen and (max-height: 799px){
+		@rules();
+	}
+}
+
+.classMedia {
+	.screenSmall({
+		font-size: 1.5rem;
+		font-weight: 400;
+		color: #ccc;
+	})
+}
+// Переменная как mixin
+// Создание переменных со свойствами и селекторами
+@rule1: {
+	font-weight: 300;
+	color: #eee;
+	.class-in {
+		background: #aaa;
+	}
+}; // !!! Обязвательно ставить точку с запятой
+
+.class {
+	@rule1();
+}

@@ -1,0 +1,42 @@
+// В отличие от CSS @import можно ставить после кода
+.class {
+	font-weight: 400;
+}
+// Подключение файлов less
+@import "custom";
+@import "custom.less";
+// @import "custom.php";  Будет обрабатываться как файл less
+
+@import "customFromCss.css"; // Просто вставляет @import в начало
+
+// Ключевые слова
+
+// reference - будет подключен но не будет выводится в CSS
+// класс как mixin или extend
+@import (reference) "extend.css"; 
+ // css - не выводит, less - выводит
+
+ // Без обработки. Нельзя использовать mixin
+ @import (inline) "custom1.less"; 	
+
+ // Любой файл преобразует в less (php, css)
+ @import (less) "customFromCss.css";
+
+ // Как обысный CSS импорт
+ @import (css) "custom1.less";
+
+ // Подключение 1 раз
+ @import (once) "custom.less";
+ @import (once) "custom.less";
+ @import (once) "custom.less";
+
+ // Подключение много раз
+ @import (multiple) "custom.less";
+ @import (multiple) "custom.less";
+ @import (multiple) "custom.less";
+
+ //Этот файл необязательный, даже если его не будет, не будет ошибки
+ // @import (optional) "cust.less";
+
+ // Кобинирование свойств
+ @import (once, less, inline) "extend.css";

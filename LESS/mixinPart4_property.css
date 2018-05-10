@@ -1,0 +1,40 @@
+.class {
+  font-size: 18px;
+  background: red;
+  font-style: italic;
+}
+@media screen and (min-width: 1200px) {
+  .classMedia {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+  }
+}
+@media screen and (min-height: 800px) {
+  .classMedia {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .classMedia {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #ccc;
+  }
+}
+@media screen and (max-height: 799px) {
+  .classMedia {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #ccc;
+  }
+}
+.class {
+  font-weight: 300;
+  color: #eee;
+}
+.class .class-in {
+  background: #aaa;
+}

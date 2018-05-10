@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial;
+                font-size: 1em;
+            }
+            
+            #posts {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            
+            #comments {
+                max-width: 1000 px;
+                float: right;
+            }
+            
+            #comments .commentItem p {
+                margin: 0 0 10px;
+            }
+            
+            .clearfix {
+                clear: both;
+            }
+            
+            form {
+                max-width: 1200px;
+                margin: 0 auto;      
+            }
+            
+            #commentForm textarea {
+                width: 80%;
+                min-height: 100px;
+                border: 1px solid #deb4b4;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 10px 0;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <div id="posts">
+            <h1>JavaScript</h1>
+            <p>Lorem ipadfas asdvcasdf adsf adsfsdfasd</p>
+        </div>
+        
+        <div id="comments">
+            <h2>Комментарии к посту</h2>
+            <div class="commentItem">
+                <p class="commenttext">
+                    sdfasf asfsad fasdf sd fasd fasd dfsaf sad fds asdf asdf asdf
+                     sadf asdf asdfsd dsaf ad fasd fasf asf daq
+                </p>
+            </div>
+        </div>
+        
+        <div class="clearfix"></div>
+        
+        <form id = "commentForm">
+            <div>
+                <label for="comment">Введите комментарий</label>
+            </div>
+            <div>
+                <textarea name="comment" id="comment"></textarea>
+            </div>
+            <button type="submit">Отправить</button>
+        </form>
+        
+        <script src="comments.js"></script>
+    </body>
+</html>

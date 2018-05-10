@@ -1,0 +1,160 @@
+// Синтаксис отступов (SASS) (или Tab, или 2 пробела)
+
+// Импортирование файлов как обычный CSS (без загрузки)
+@import "foo.css"
+@import "foo" screen // Медиа параметры
+@import "http://foo.com/bar"
+@import url(foo)
+
+// Импорт  с загрузкой
+// @impprt "media.sass"
+// @import "media.scss"
+// @import "media"  Для media.scc или для фрагмента _media.sass/_media.scss
+// !!! Важно следить куда импортировать, если есть отступы то они будут вложенные
+
+/* 1.1 */
+// Создание переменной
+$font-stack: Helvetica, Verdana, sans-serif
+$primary-color: #333
+
+body 
+	font: 100% $font-stack
+	color: $primary-color
+
+// Вложения через отступы
+#main p 
+	color: #0ff
+	width: 97%
+	.rebox
+		background-color: red
+		ul 
+			create: green
+/* 1.2 */
+// Родительский селектор - &
+a 
+	font-weight: bold
+	text-decoration: none
+	&:hover
+		text-decoration: underline
+		&:active
+			color: red
+/* 1.3 */
+// Вложенные свойства
+.selctor
+	margin:
+		top: 10px
+		bottom: 2px
+		left: 4px
+		right: 5px
+/* 1.4 */
+// Селекторы шаблоны (@extend)
+%item-base
+	display: inline-block
+	margin: 1px
+.item-type-one
+	@extend %item-base
+	color: red
+
+//2 SassScript
+/* 2.1 */
+//2.1 Переменные в Sass
+$accent: #ccc
+.button 
+	color: $accent
+	background-color: red
+/* 2.2 */
+//2.2 Операции с числами, строками и интерполяция (+ - / * %)
+$sum: (10 + 20) / 2
+$cn: content
+
+.selector
+	margin: 
+		top: $sum + px // Конкатенация сторок
+		bottom: 2px + 8px
+	background-color: trans + par + ent // Конкатенация сторок
+	#{$cn}: "con" + "tent" // Интерполяция - получение нового значения использую другие
+
+$in: Hallo
+.interpol
+	content: "#{$in} world!"
+/* 2.3 */
+// 2.3 Опреции с цветами (+ - / * )
+$color1: #440203 + #550506
+$color2: #010203 * 2
+$color3: rgba(180, 0, 0, .75) + rgba(20, 255, 0, .75) // .75 - обоих, иначе ошибка
+
+body 
+	background-color: $color1
+	color: $color2
+	border-color: $color3
+// Сложение непрозрачности (opacify)
+$translucent-red: rgba(255, 0, 0, .5)
+p 
+	color: opacify($translucent-red, 0.3)
+// Запись через hex
+.selector
+	background-color: rgba(#333, 0.75)
+
+/* 2.4 */
+// Директива и правила @at-root - отменяет вложеность, поднимает в корень
+.selctor
+	margin-top: 10px
+	@at-root 
+		.item
+			background-color: red
+	.item1
+		background-color: green
+		@at-root
+			ul
+				background: #333
+// Выражения 
+/* 2.5 */
+// Директива @if - условия
+$var: 5
+.selector
+	@if $var >= 5
+		content: "Number >= 5"
+	@else if $var <= 5
+		content: "Number <= 5"
+	@else 
+		content: ""
+/* 2.6 */
+// Директива @for
+@for $i from 1 to 5 // от 1 до 4 (5 не включено)
+	.item-#{$i}
+		background-image: url(img/#{$i}.jpg)
+/* 2.6.1 */
+@for $i from 1 through 5 // от 1 до 5 (5 включено)
+	.item-#{$i}
+		background-image: url(img/#{$i}.jpg)
+/* 2.7 */
+// Директива @each - проход по списку значений, как и for но только названия
+@each $name in carousel, block, vertical, reviews, foot
+	.section-#{$name}
+		background-image: url(img/#{$name}.jpg)
+/* 2.8 */
+// Директива @while
+$i: 7
+@while $i > 0
+	.item-#{$i}
+		width: 1em * $i
+	$i: $i - 2
+/* 2.9 */
+// Mixin - примеси (шаблоны)
+// Создаем
+@mixin border($color)
+	border: $color 1px solid
+
+// Подключаем
+p 
+	@include border(#333)
+
+// mixin для префиксов
+@mixin transition($time)
+	-webkit-transition: all $time ease
+	-moz-transition: 	all $time ease
+	-o-transition: 		all $time ease
+	transition: 		all $time ease
+
+p
+	@include transition(.25s)

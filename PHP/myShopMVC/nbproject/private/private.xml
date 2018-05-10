@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/G:/OpenServer/domains/localhost/myShopMVC/controllers/ArticleController.php</file>
+            <file>file:/G:/OpenServer/domains/localhost/myShopMVC/models/News.php</file>
+            <file>file:/G:/OpenServer/domains/localhost/myShopMVC/views/news/index.php</file>
+            <file>file:/G:/OpenServer/domains/localhost/myShopMVC/components/Db.php</file>
+            <file>file:/G:/OpenServer/domains/localhost/myShopMVC/models/Product.php</file>
+            <file>file:/G:/OpenServer/domains/localhost/myShopMVC/template/css/style.css</file>
+            <file>file:/G:/OpenServer/domains/localhost/myShopMVC/.htaccess</file>
+            <file>file:/G:/OpenServer/domains/localhost/myShopMVC/controllers/NewsController.php</file>
+            <file>file:/G:/OpenServer/domains/localhost/myShopMVC/controllers/ProductController.php</file>
+            <file>file:/G:/OpenServer/domains/localhost/myShopMVC/config/db_params.php</file>
+            <file>file:/G:/OpenServer/domains/localhost/myShopMVC/models/Article.php</file>
+            <file>file:/G:/OpenServer/domains/localhost/myShopMVC/config/routes.php</file>
+            <file>file:/G:/OpenServer/domains/localhost/myShopMVC/index.php</file>
+            <file>file:/G:/OpenServer/domains/localhost/myShopMVC/components/Router.php</file>
+        </group>
+    </open-files>
+</project-private>

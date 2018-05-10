@@ -1,0 +1,77 @@
+// mixin with params
+// Примесь без параметра
+.transition() {
+	-webkit-transition: background 0.5s ease;
+	-o-transition: background 0.5s ease;
+	transition: background 0.5s ease;
+}
+.cls1 {
+	.transition();
+}
+
+// Примесь с параметром
+.transition(@prop) {
+	-webkit-transition: @prop 0.5s ease;
+	-o-transition: @prop 0.5s ease;
+	transition: @prop 0.5s ease;
+}
+.cls2 {
+	.transition(width);
+}
+
+// Несколько параметров
+.transition(@prop, @timing, @effect) {
+	-webkit-transition: @prop @timing @effect;
+	-o-transition: @prop @timing @effect;
+	transition: @prop @timing @effect;
+}
+.cls3 {
+	.transition(height, 0.3s, linear);
+}
+
+// Значения по умолчанию, можно не указывать при вызове параметры
+.transition4(@prop: all; @timing: 0.2s; @effect: linear) {
+	-webkit-transition: @prop @timing @effect;
+	-o-transition: @prop @timing @effect;
+	transition: @prop @timing @effect;
+}
+.cls4 {
+	.transition4();
+}
+// Изменение параметра, не указанные по умочанию - linear
+.cls4_1 {
+	.transition4(width, 0.9s);
+}
+.cls4_2 {
+	.transition4(@effect: ease);
+}
+
+// Примесь с одним именем на различными параметрами
+.mixin(@color: #ccc) { 
+	color: @color;
+}
+.mixin(@color: #000, @fontSize: 18px) {
+	background-color: @color;
+	font-size: @fontSize;
+}
+
+// Не можем вызвать без параметров, так не по умолчанию
+.mixin(@color, @fontSize: 16px) {
+	background: @color;
+	font-size: @fontSize;
+}
+.mixin(@color, @fontSize, @fontWeight: bold) {
+	color: @color;
+	font-size: @fontSize;
+	font-weight: @fontWeight;
+}
+
+.clsAll {
+	.mixin(); // Первая и вторая mixin
+}
+.clsColor {
+	.mixin(@color:red); // 1,2,3 mixin
+}
+.cls3 {
+	.mixin(green, 2rem, 500); // Только 4-ая mixin
+ }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Трансформации</title>
+	 <style>
+	 	body {
+	 		background: #ccc;
+	 		font: 1em 'PT Sans', Tahoma, Arial;
+	 	}
+
+	 	#container {
+	 		background: rgba(0,0,0,.3);
+	 		border-radius: 8px;
+	 		border: 3px solid #fff;
+	 		color: #fff;
+	 		font-size: 1.2em;
+	 		height: 80%;
+	 		line-height: 80%;
+	 		margin: 80px;
+	 		text-align: center;
+	 		width: 80%;
+
+	 		/*-webkit-transform: translate(30px, 80px) rotate(60deg) scale(1) skewX(45deg);*/
+	 		-webkit-transform: rotate3d(1,1,1,-30deg);  
+			
+	 	}
+
+	 	#wrapper {
+	 		perspective: 500px;
+	 		perspective-origin: 20px 40px;
+	 		width: 800px;
+			height: 800px;
+	 	}
+	 </style>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="container">
+			<iframe src="videoAudio.html" width="500" height="500"></iframe>
+		</div>
+	</div>
+</body>
+</html>

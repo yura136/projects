@@ -1,0 +1,68 @@
+// Mixin - примесь (мексина)
+// Mixin - как класс
+.nav { 
+	font-style: italic;
+	color: #000;
+}
+// Mixin - как идентификатор
+#navigation {
+	font-size: 2rem;
+	border: 1px solid red;
+}
+// 2 способа использования mixin 
+ul {
+	.nav; 
+	// .nav()
+	background: red;
+}
+a {
+	#navigation();
+	// #navigation
+}
+ul a {
+	.nav();
+	#navigation;
+}
+
+// Если не хотим показывать стили примеси после названия ставим ()
+.btn() {
+	font-size: 1rem;
+	background: #fff;
+}
+#btn1() {
+	color: green;
+}
+.link-btn {
+	.btn;
+	#btn1;
+}
+// Отдельные селекторы в примесях
+.btn2() {
+	font-size: 2rem;
+	font-weight: 500;
+	&:hover {
+		background: purple;
+		font-size: 20px;
+	}
+}
+.link-btn2 {
+	.btn2;
+}
+// Ключевое слова !important
+.link-btn2_1 {
+	.btn2!important;
+}
+// Несколько классов
+.nav2 {
+	.btn2() { // Не выведеться
+		font-size: 2rem;
+		font-weight: 500;
+		&:hover {
+			background: purple;
+			font-size: 20px;
+		}
+	}
+}
+.link-btn {
+	.nav2 .btn2;
+}

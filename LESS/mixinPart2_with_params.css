@@ -1,0 +1,47 @@
+.cls1 {
+  -webkit-transition: background 0.5s ease;
+  -o-transition: background 0.5s ease;
+  transition: background 0.5s ease;
+}
+.cls2 {
+  -webkit-transition: width 0.5s ease;
+  -o-transition: width 0.5s ease;
+  transition: width 0.5s ease;
+}
+.cls3 {
+  -webkit-transition: height 0.3s linear;
+  -o-transition: height 0.3s linear;
+  transition: height 0.3s linear;
+}
+.cls4 {
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.cls4_1 {
+  -webkit-transition: width 0.9s linear;
+  -o-transition: width 0.9s linear;
+  transition: width 0.9s linear;
+}
+.cls4_2 {
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.clsAll {
+  color: #cccccc;
+  background-color: #000000;
+  font-size: 18px;
+}
+.clsColor {
+  color: red;
+  background-color: red;
+  font-size: 18px;
+  background: red;
+  font-size: 16px;
+}
+.cls3 {
+  color: green;
+  font-size: 2rem;
+  font-weight: 500;
+}

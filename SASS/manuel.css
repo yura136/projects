@@ -1,0 +1,151 @@
+@import url(foo.css);
+@import "foo" screen;
+@import "http://foo.com/bar";
+@import url(foo);
+/* 1.1 */
+body {
+  font: 100% Helvetica, Verdana, sans-serif;
+  color: #333; }
+
+#main p {
+  color: #0ff;
+  width: 97%; }
+  #main p .rebox {
+    background-color: red; }
+    #main p .rebox ul {
+      create: green; }
+
+/* 1.2 */
+a {
+  font-weight: bold;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+    a:hover:active {
+      color: red; }
+
+/* 1.3 */
+.selctor {
+  margin-top: 10px;
+  margin-bottom: 2px;
+  margin-left: 4px;
+  margin-right: 5px; }
+
+/* 1.4 */
+.item-type-one {
+  display: inline-block;
+  margin: 1px; }
+
+.item-type-one {
+  color: red; }
+
+/* 2.1 */
+.button {
+  color: #ccc;
+  background-color: red; }
+
+/* 2.2 */
+.selector {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  content: "content"; }
+
+.interpol {
+  content: "Hallo world!"; }
+
+/* 2.3 */
+body {
+  background-color: #990709;
+  color: #020406;
+  border-color: rgba(200, 255, 0, 0.75); }
+
+p {
+  color: rgba(255, 0, 0, 0.8); }
+
+.selector {
+  background-color: rgba(51, 51, 51, 0.75); }
+
+/* 2.4 */
+.selctor {
+  margin-top: 10px; }
+  .item {
+    background-color: red; }
+  .selctor .item1 {
+    background-color: green; }
+    ul {
+      background: #333; }
+
+/* 2.5 */
+.selector {
+  content: "Number >= 5"; }
+
+/* 2.6 */
+.item-1 {
+  background-image: url(img/1.jpg); }
+
+.item-2 {
+  background-image: url(img/2.jpg); }
+
+.item-3 {
+  background-image: url(img/3.jpg); }
+
+.item-4 {
+  background-image: url(img/4.jpg); }
+
+/* 2.6.1 */
+.item-1 {
+  background-image: url(img/1.jpg); }
+
+.item-2 {
+  background-image: url(img/2.jpg); }
+
+.item-3 {
+  background-image: url(img/3.jpg); }
+
+.item-4 {
+  background-image: url(img/4.jpg); }
+
+.item-5 {
+  background-image: url(img/5.jpg); }
+
+/* 2.7 */
+.section-carousel {
+  background-image: url(img/carousel.jpg); }
+
+.section-block {
+  background-image: url(img/block.jpg); }
+
+.section-vertical {
+  background-image: url(img/vertical.jpg); }
+
+.section-reviews {
+  background-image: url(img/reviews.jpg); }
+
+.section-foot {
+  background-image: url(img/foot.jpg); }
+
+/* 2.8 */
+.item-7 {
+  width: 7em; }
+
+.item-5 {
+  width: 5em; }
+
+.item-3 {
+  width: 3em; }
+
+.item-1 {
+  width: 1em; }
+
+/* 2.9 */
+p {
+  border: #333 1px solid; }
+
+p {
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease; }
+
+/*# sourceMappingURL=manuel.css.map */

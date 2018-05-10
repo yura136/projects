@@ -1,0 +1,60 @@
+// Variables
+// Переменные со значениями
+@fontSize: 18px;
+@border: 2px solid #ccc;
+
+a{
+	font-size: @fontSize;
+	display: inline-block;
+	border: @border;
+}
+
+// Переменные со значением селектора
+@nav: navigation;
+
+.@{nav} {width: 100px;}
+
+#@{nav} {height: 500px;}
+
+.header-@{nav} {background: #fff;}
+
+// Сохранение ссылки в переменной
+@img: 'img/'; 
+
+body {background-image: url("@{img}city.jpeg");}
+
+// Переменные как свойства
+@property: background;
+@color: color;
+
+body {
+	@{property}-size: 100%;
+	@{property}-@{color}: #f00;
+}
+
+// Переменные через переменные 
+@var: "Some text";
+@var1: "var";
+
+div:before {content: @@var1;}
+
+// Не имеет значения, где объявлена переменная
+
+header {background: @backgroundColor;}
+
+@backgroundColor: green;
+
+// Глобальные и локальные переменные 
+
+footer {
+	color: @colorFooter;
+	@colorFooter: gray; // Локальная переопределяет глобальную
+	li {
+		@colorFooter: purple;
+		background: @colorFooter;
+		@colorFooter: blue; // Исп. т.к. последняя
+
+	}
+}
+
+@colorFooter: red;

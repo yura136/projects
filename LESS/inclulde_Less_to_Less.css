@@ -1,0 +1,104 @@
+@import "customFromCss.css";
+@import "extend.css";
+@import "custom1.less";
+.class {
+  font-weight: 400;
+}
+.fromCustom {
+  color: #ddd;
+  background: #ccc;
+  border: 1px solid green;
+}
+// Я из custom1
+.fromCustom1 {
+	color: #000;
+}
+.customFromCss {
+  font-style: italic;
+}
+.fromCustom {
+  color: #ddd;
+  background: #ccc;
+  border: 1px solid green;
+}
+.fromCustom {
+  color: #ddd;
+  background: #ccc;
+  border: 1px solid green;
+}
+.fromCustom {
+  color: #ddd;
+  background: #ccc;
+  border: 1px solid green;
+}
+.btn,
+.link-btn {
+  color: #000;
+  font-size: 18px;
+}
+.btn2,
+.link-btn {
+  color: #000;
+  font-size: 18px;
+}
+.nav .btn3,
+.link-btn,
+.nav .link-btn {
+  color: #000;
+  font-size: 18px;
+}
+.nav .btn3,
+.link-btn,
+.nav .link-btn {
+  color: #000;
+  font-size: 18px;
+}
+body .nav1 .btn4,
+body .nav1 .link-btn {
+  color: #000;
+  font-size: 18px;
+}
+.btn5,
+.link-btn:hover:active,
+.link-btn:hover:active {
+  color: #000;
+  font-size: 18px;
+}
+.btn6,
+.link-btn:hover:active,
+.link-btn:hover:active {
+  background: yellow;
+}
+.btn5,
+.link-btn:hover:active,
+.link-btn:hover:active {
+  color: #000;
+  font-size: 18px;
+}
+.btn6,
+.link-btn:hover:active,
+.link-btn:hover:active {
+  background: yellow;
+}
+.btn7,
+.link-btn,
+.link-btn1,
+.link-btn2 {
+  color: navy;
+}
+.link-btn8 {
+  font-size: 1rem;
+}
+.btn8,
+.link-btn8 {
+  color: navy;
+}
+div .btn9,
+.link-btn9 {
+  font-style: italic;
+}
+.btn10:nth-of-type(1n+3),
+.link-btn10 {
+  color: orange;
+}
+

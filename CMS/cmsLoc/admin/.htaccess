@@ -1,0 +1,17 @@
+RewriteEngine On
+#
+#Options All -Indexes
+#
+#
+#ErrorDocument 400 /
+#ErrorDocument 401 /
+#ErrorDocument 402 /
+#ErrorDocument 403 /
+#ErrorDocument 404 /
+#ErrorDocument 500 /
+#
+#
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php/$1 [L]

@@ -1,0 +1,95 @@
+body {
+  font-size: 18px;
+}
+body ul {
+  font-size: 16px;
+}
+body ul li {
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #000;
+}
+a > span {
+  color: gray;
+}
+.nav a {
+  color: #fff;
+}
+.nav a:hover {
+  color: #000;
+}
+.input {
+  color: #000;
+}
+.input-success {
+  color: green;
+}
+.class .btn {
+  color: #fff;
+}
+.class .btn + .class .btn {
+  color: #000;
+}
+.class .btn > .class .btn {
+  color: gray;
+}
+.class .btn.class .btn {
+  color: yellow;
+}
+.class .btn,
+.class .btn {
+  color: green;
+}
+.nav .menu {
+  color: #fff;
+  background: red;
+}
+.home .nav .menu {
+  color: #000;
+  background: white;
+}
+.cls .cls1 .nav .menu {
+  color: purple;
+}
+.nav2::before,
+.nav3::before {
+  content: "sf";
+}
+div,
+p,
+ul,
+li,
+span {
+  color: #eee;
+}
+div div,
+div p,
+div ul,
+div li,
+div span,
+p div,
+p p,
+p ul,
+p li,
+p span,
+ul div,
+ul p,
+ul ul,
+ul li,
+ul span,
+li div,
+li p,
+li ul,
+li li,
+li span,
+span div,
+span p,
+span ul,
+span li,
+span span {
+  color: orange;
+}
